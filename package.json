@@ -1,0 +1,27 @@
+{
+  "name": "@joshmiquel/hirez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "package.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/buildTypescript.js",
+    "path": "npm version patch -m 'Upgrade to %s' && npm publish",
+    "minor": "npm version minor -m 'Upgrade to %s' && npm publish",
+    "major": "npm version major -m 'Upgrade to %s' && npm publish"
+  },
+  "author": "JoShMiQueL",
+  "license": "MIT",
+  "devDependencies": {
+    "tsc-prog": "^2.2.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
