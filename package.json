@@ -10,7 +10,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "node scripts/buildTypescript.js",
+    "version": "node scripts/buildTypescript.js",
+    "postversion": "git push && git push --tags",
     "path": "npm version patch -m 'Upgrade to %s' && npm publish",
     "minor": "npm version minor -m 'Upgrade to %s' && npm publish",
     "major": "npm version major -m 'Upgrade to %s' && npm publish"
