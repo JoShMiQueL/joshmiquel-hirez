@@ -1,3 +1,3 @@
-import { getPokemons } from "./src/getPokemons";
-
-export const xd = async () => console.log(await getPokemons());
+import { Paladins } from './src/Paladins'
+import { Smite } from './src/Smite'
+export { Smite, Paladins }
