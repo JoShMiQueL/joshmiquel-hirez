@@ -11,10 +11,10 @@
   ],
   "scripts": {
     "version": "node scripts/buildTypescript.js",
-    "postversion": "git push && git push --tags",
-    "path": "npm version patch -m 'Upgrade to %s' && npm publish",
-    "minor": "npm version minor -m 'Upgrade to %s' && npm publish",
-    "major": "npm version major -m 'Upgrade to %s' && npm publish",
+    "git": "git commit -am 'Update' && git push",
+    "patch": "npm run build && npm version patch -m 'Upgrade to %s' && npm run git && npm publish",
+    "minor": "npm run build && npm version minor -m 'Upgrade to %s' && npm run git && npm publish",
+    "major": "npm run build && npm version major -m 'Upgrade to %s' && npm run git && npm publish",
     "build": "shx rm -r lib && tsc",
     "dev": "npm run build && shx cp cache.json lib/cache.json"
   },
