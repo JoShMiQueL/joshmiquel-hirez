@@ -1,5 +1,4 @@
 import axios from 'axios'
-import chalk from 'chalk'
 import 'dotenv/config'
 import fs from 'fs'
 import https from 'https'
@@ -80,7 +79,7 @@ export abstract class Hirez {
         return { status: error.response.status }
       }
     } finally {
-      console.log(chalk`{red Requested url: ${url}}`) // DEBUG
+      // console.log(chalk`{red Requested url: ${url}}`) // DEBUG
     }
   }
 
